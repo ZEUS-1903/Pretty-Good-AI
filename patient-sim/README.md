@@ -1,4 +1,4 @@
-# patient-sim
+# Patient Sim
 
 An automated patient that phones a voice AI receptionist, holds a real
 conversation with it, records both sides, and reports what it broke.
