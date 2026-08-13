@@ -24,9 +24,9 @@ timer competing for the event loop. When the model produces audio it lands in a
 queue and is metered out one frame per tick; when the agent talks over us, the
 queue is dropped, Twilio is told to flush, and the model's own conversation item
 is truncated at the number of milliseconds that actually reached the phone. On
-hangup the WAV is written, transcoded to MP3, and the transcript — the agent's
+hangup the WAV is written, transcoded to MP3, and the transcript the agent's
 side from Realtime input transcription, ours from the model's exact output
-transcript — is written alongside a JSON record with per-call metrics. A second
+transcript is written alongside a JSON record with per-call metrics. A second
 pass then re-reads every transcript with a reasoning model and merges its
 findings with the in-call flags into a single ranked `BUG_REPORT.md`.
 
@@ -45,7 +45,7 @@ A production voice agent pauses mid-turn while it looks things up, which is
 exactly the case where naive VAD talks over it.
 
 The costs of this choice are real. Speech-to-speech is more expensive per
-minute, and you get less control over the exact words spoken — you cannot force
+minute, and you get less control over the exact words spoken you cannot force
 a literal line the way you can when you own the TTS. That second point matters
 for a *test harness*, where reproducibility is worth something. I accepted it
 because the scenarios test behaviour under natural conversation rather than
@@ -58,7 +58,7 @@ pins the goal, the probes and the success criteria.
 ### Raw Twilio Media Streams, not a managed voice-agent platform
 
 Vapi, Retell and Bland would have had a bot on the phone in an afternoon. They
-were the wrong tool here because the deliverable is not a voice agent — it is
+were the wrong tool here because the deliverable is not a voice agent it is
 *evidence about someone else's voice agent*. Those platforms own the audio path,
 which means the recording, the turn boundaries and the latency numbers are
 whatever they choose to expose. Owning the socket is what makes it possible to
@@ -104,7 +104,7 @@ free and gives perfectly separated channels: patient left, agent right. Driving
 it from the same tick that paces playback is what keeps the channels aligned, so
 transcript timestamps line up with the audio. Twilio's dual-channel recording is
 still fetched when enabled, as an independent copy in case the stream ever drops
-frames — but the local file is the one to listen to.
+frames but the local file is the one to listen to.
 
 `audioop` would have made the mu-law conversion a one-liner; it was removed from
 the standard library in Python 3.13, so there is a 256-entry lookup table in
@@ -128,7 +128,7 @@ ground truth, and the report points at both.
 
 A scenario is a YAML file: persona, goal, probes, success criteria, things to
 watch for, turn-taking mode. This is the part that made iteration cheap. After
-listening to the first calls, the fixes were mostly prompt and scenario edits —
+listening to the first calls, the fixes were mostly prompt and scenario edits
 tightening turn length, stopping the bot from volunteering its date of birth
 before being asked, adding explicit close-out rules so calls end naturally
 instead of running to the time limit. Those changes are recorded in the comments
