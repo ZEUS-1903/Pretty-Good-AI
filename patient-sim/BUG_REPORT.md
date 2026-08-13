@@ -12,7 +12,7 @@
 2. Issues flagged live by the patient bot (`flag_issue`) and issues found by
    post-call transcript review are merged, deduplicated by call, and ranked by
    severity.
-3. **Then you listen.** Open the MP3 at each timestamp and confirm the agent
+3. Then you listen. Open the MP3 at each timestamp and confirm the agent
    actually said what the transcript claims. Delete anything that does not hold
    up, and tighten the wording of what remains. Machine transcription is
    imperfect and an unverified report is worse than a short one.
@@ -37,13 +37,13 @@ it:
 ```
 ### 1. Confirms a Sunday appointment without checking office hours
 
-- **Severity:** high
-- **Category:** hallucination
-- **Where:** `call-06-weekend-request.txt` at 1:23 (audio: `call-06-weekend-request.mp3`)
-- **Found by:** flagged live by the caller
-- **Agent said:** "..."
-- **Why it matters:** ...
-- **Expected:** ...
+- Severity: high
+- Category: hallucination
+- Where: `call-06-weekend-request.txt` at 1:23 (audio: `call-06-weekend-request.mp3`)
+- Found by: flagged live by the caller
+- Agent said: "..."
+- Why it matters: ...
+- Expected: ...
 ```
 
 ## Findings
