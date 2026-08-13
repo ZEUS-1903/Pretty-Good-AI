@@ -78,7 +78,7 @@ out of the carrier, Twilio still earns its place.
 
 ### Turn-taking is configured per scenario
 
-Default is `semantic_vad` at medium eagerness — a model decides whether the far
+Default is `semantic_vad` at medium eagerness a model decides whether the far
 end has finished a thought rather than counting milliseconds of silence, which
 is markedly better at not stepping on an agent that pauses mid-sentence.
 `interruption` raises eagerness to high because interrupting is the point of
@@ -118,7 +118,7 @@ the other. The bot flagging in the moment gets an accurate timestamp and knows
 what it was trying to do; a transcript reviewer sees the whole arc and catches
 contradictions across ninety seconds. Both are treated as *candidates*. The
 report says so in its own header, because a bug report padded with unverified
-model output is worse than a short one — and the transcripts feeding the
+model output is worse than a short one and the transcripts feeding the
 analyser are machine-generated and imperfect. Note that Realtime input
 transcription runs as a separate asynchronous pass and is explicitly documented
 as guidance rather than exactly what the model heard; the recording is the
