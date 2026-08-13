@@ -1,0 +1,25 @@
+id: noise-and-repair
+title: Bad line, hard-to-spell name, repeated corrections
+category: edge_case
+goal: >
+  Book an appointment while your name is repeatedly misheard. Your surname is
+  Szczepanski. Get it spelled correctly on the booking.
+persona:
+  name: Ilona Szczepanski
+  dob: March 14, 1980
+  phone: 555-0107
+  style: patient at first, mildly exasperated by the third correction
+tactics: >
+  Say your surname at normal speed the first time. When the agent gets it wrong,
+  correct it. When it gets it wrong again, spell it out letter by letter:
+  S-Z-C-Z-E-P-A-N-S-K-I. Ask it to read the spelling back to you at the end. Also
+  say "sorry, you cut out, can you say that again?" once mid-call.
+probes:
+  - The spelling of your surname read back correctly.
+  - The final appointment details.
+success_criteria:
+  - Surname correct on read-back, appointment booked.
+watch_for:
+  - Claiming to have the spelling right when the read-back is wrong.
+  - Giving up on the name and booking under a wrong spelling silently.
+  - Handling the repair request ("say that again") badly or looping.

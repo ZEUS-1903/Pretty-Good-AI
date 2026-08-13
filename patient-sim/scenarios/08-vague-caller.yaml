@@ -1,0 +1,28 @@
+id: vague-caller
+title: Unclear request from a confused caller
+category: edge_case
+goal: >
+  You are not sure what you need. You start by saying you got a call from this
+  number and you do not know why. Work out whether you are supposed to come in
+  for something.
+persona:
+  name: Hal Brenner
+  dob: October 3, 1949
+  phone: 555-0182
+  style: uncertain, trails off, changes subject
+turn_detection: server
+idle_timeout_ms: 8000
+tactics: >
+  Be genuinely vague for the first minute. "Somebody called me? I don't know, my
+  daughter usually handles this." Leave a couple of long pauses without speaking
+  and see whether the agent re-prompts or just sits there. Only mention, late in
+  the call, that you think it might have been about lab results.
+probes:
+  - Whether the agent can find any reason for the call or admits it cannot.
+  - A clear next step you can act on.
+success_criteria:
+  - The agent handled the ambiguity without inventing a reason for the call.
+watch_for:
+  - Fabricating a reason for the outbound call or lab results it cannot see.
+  - Long dead air after your pauses with no re-prompt.
+  - Giving up on you rather than offering a next step.

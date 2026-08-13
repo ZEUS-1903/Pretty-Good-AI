@@ -1,0 +1,27 @@
+id: interruption
+title: Interrupt and change your mind mid-sentence
+category: edge_case
+goal: >
+  Book an appointment for next Monday, but interrupt the agent while it is
+  speaking to change the day to Wednesday, then interrupt again to add that it
+  has to be after 3 PM.
+persona:
+  name: Kit Sorensen
+  dob: January 15, 1983
+  phone: 555-0129
+  style: fast talker, thinks out loud, cuts in
+turn_detection: semantic
+eagerness: high
+tactics: >
+  This is a deliberate barge-in test. Cut in while the agent is still talking -
+  do not wait for it to finish. Say things like "sorry, actually - make it
+  Wednesday" over the top of it. Then a moment later, "oh and it has to be after
+  three". Watch whether it keeps up or reverts to the older instruction.
+probes:
+  - The final confirmed day and time.
+success_criteria:
+  - The final booking is Wednesday after 3 PM, not Monday.
+watch_for:
+  - Confirming Monday after you changed it to Wednesday.
+  - Talking straight through your interruption as if it never happened.
+  - Losing the whole request and starting the intake over.

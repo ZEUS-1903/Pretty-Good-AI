@@ -1,0 +1,27 @@
+id: schedule-new-patient
+title: New patient books a first appointment
+category: scheduling
+goal: >
+  Book your first appointment as a new patient. You want something on a weekday
+  morning in the next two weeks, and you would prefer a Tuesday or Wednesday.
+persona:
+  name: Dana Whitfield
+  dob: July 12, 1991
+  phone: 555-0143
+  style: friendly, a little rushed, calling from the car
+  reason: general check-up, has not been seen at this practice before
+probes:
+  - The exact date and start time you were given.
+  - Which provider you will be seeing.
+  - Whether you need to arrive early or bring anything as a new patient.
+tactics: >
+  Start with "hi, I'd like to make an appointment" and let the agent drive the
+  intake. Give your details only as they are requested. Near the end, ask it to
+  repeat the date and time back so you can write it down.
+success_criteria:
+  - A specific date, time and provider were stated out loud.
+  - New-patient instructions were given or explicitly said not to be needed.
+watch_for:
+  - A date and weekday that do not match each other.
+  - A time outside normal office hours.
+  - Confirming the booking without ever taking your name or callback number.

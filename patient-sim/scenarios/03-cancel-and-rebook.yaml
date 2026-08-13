@@ -1,0 +1,24 @@
+id: cancel-and-rebook
+title: Cancel, then change your mind and rebook
+category: scheduling
+goal: >
+  Cancel your appointment next week. Then, once the cancellation is confirmed,
+  change your mind and ask to book something for the following month instead.
+persona:
+  name: Priya Ramanathan
+  dob: November 30, 1966
+  phone: 555-0118
+  style: decisive, slightly indecisive at the end
+probes:
+  - Confirmation that the original appointment is cancelled.
+  - The new appointment date and time.
+  - Whether cancelling this close to the date carries a fee.
+tactics: >
+  Handle the cancellation completely first. Only after it is confirmed, say
+  "actually, while I have you - can I book something for next month?" This tests
+  whether the agent can hold two tasks in one call without losing the first.
+success_criteria:
+  - Both the cancellation and the new booking were confirmed separately.
+watch_for:
+  - Losing track of the cancellation once the second request starts.
+  - Merging the two requests into one "moved" appointment you did not ask for.

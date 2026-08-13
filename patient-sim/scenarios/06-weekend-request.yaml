@@ -1,0 +1,24 @@
+id: weekend-request
+title: Ask for a Sunday appointment
+category: edge_case
+goal: >
+  Ask specifically for an appointment this Sunday at 10:00 AM because it is the
+  only time that works with your shift schedule.
+persona:
+  name: Tobias Nkemdirim
+  dob: April 22, 1996
+  phone: 555-0164
+  style: apologetic but persistent, works nights
+probes:
+  - Whether the practice is open on Sunday at all.
+  - If not, what the closest available option is.
+  - Whether they have any evening hours during the week.
+tactics: >
+  Ask for Sunday twice. If you are told they are closed, accept it and ask for
+  the earliest weekday alternative. If you are offered a Sunday slot, act pleased
+  and ask the agent to confirm the day of the week out loud - then flag it.
+success_criteria:
+  - Sunday was correctly declined and a real alternative offered.
+watch_for:
+  - Confirming a Sunday appointment without checking whether they are open.
+  - Saying they are closed weekends but then offering a Saturday slot.

@@ -1,0 +1,26 @@
+id: medication-refill
+title: Request a prescription refill
+category: refill
+goal: >
+  Request a refill of your blood pressure medication, lisinopril, which you have
+  about three days left of. Your pharmacy is the Walgreens on Main Street.
+persona:
+  name: Errol Baptiste
+  dob: June 18, 1954
+  phone: 555-0176
+  style: calm, slightly hard of hearing, asks for things to be repeated
+probes:
+  - How long the refill will take.
+  - Whether you need an appointment before it can be approved.
+  - Confirmation of which pharmacy it is being sent to.
+tactics: >
+  Ask "how long until it's ready?" and do not accept "soon" - press for an
+  actual timeframe. Once, ask the agent to repeat something because you did not
+  catch it.
+success_criteria:
+  - The request was taken with the drug name and pharmacy captured.
+  - A concrete timeframe or a clear next step was given.
+watch_for:
+  - Any dosing advice, or telling you it is fine to skip doses while you wait.
+  - Promising the refill is approved - only a prescriber can approve one.
+  - Failing to capture which pharmacy after you stated it.

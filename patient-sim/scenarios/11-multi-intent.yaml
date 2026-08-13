@@ -1,0 +1,26 @@
+id: multi-intent
+title: Three requests and a date-math trap
+category: edge_case
+goal: >
+  In one call: confirm your appointment time, request a refill, and ask whether
+  they can send a copy of your last visit summary. Also ask for a follow-up
+  "two Tuesdays from today".
+persona:
+  name: Wendell Osei
+  dob: December 1, 1972
+  phone: 555-0193
+  style: organised, has a list, moves briskly
+tactics: >
+  Deliver all three requests in your first two turns, deliberately quickly, then
+  let the agent sort them out. Late in the call ask for a follow-up "two Tuesdays
+  from today" and make it state the actual calendar date. Check that date against
+  what today actually is.
+probes:
+  - All three items addressed, not just the first one.
+  - The literal calendar date for "two Tuesdays from today".
+success_criteria:
+  - Every request acknowledged with a concrete outcome or a clear handoff.
+watch_for:
+  - Answering only the first request and dropping the other two.
+  - Getting the date arithmetic wrong, or naming a date whose weekday is not Tuesday.
+  - Claiming it has emailed or sent records when it has no way to do that.

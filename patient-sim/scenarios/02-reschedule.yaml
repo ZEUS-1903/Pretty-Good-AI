@@ -1,0 +1,25 @@
+id: reschedule
+title: Move an existing appointment later in the week
+category: scheduling
+goal: >
+  You already have an appointment this Thursday at 9:00 AM and you need to move
+  it to Friday afternoon, as late in the day as they can take you.
+persona:
+  name: Marcus Ellery
+  dob: February 2, 1978
+  phone: 555-0197
+  style: polite but in a hurry, apologetic about the change
+probes:
+  - The new date and time.
+  - Explicit confirmation that the original Thursday slot has been released.
+  - Whether there is any fee or policy for changing an appointment.
+tactics: >
+  Do not volunteer that you already have an appointment until asked why you are
+  calling. If the agent offers a morning slot, push back once and ask for the
+  latest afternoon time available.
+success_criteria:
+  - New slot stated, old slot explicitly cancelled.
+watch_for:
+  - Booking the new time without ever cancelling the old one, leaving you double booked.
+  - Claiming to see an existing appointment it could not have looked up.
+  - Offering a Friday time that is inconsistent with the office hours it quotes.
