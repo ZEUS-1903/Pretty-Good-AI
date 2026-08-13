@@ -91,7 +91,7 @@ to sit in silence and see whether the agent re-prompts or just dies.
 When the agent talks over us, three things have to happen together: drop our
 queued audio, flush Twilio's buffer with a `clear` event, and send
 `conversation.item.truncate` with the offset that actually played. Skipping the
-third is the classic bug — the model still believes it finished the sentence,
+third is the classic bug the model still believes it finished the sentence,
 and its next turn references words nobody heard. Because playback is paced one
 frame per tick, the played offset is just a frame counter, and it is exact
 rather than estimated. There is a test that asserts the truncation offset equals
